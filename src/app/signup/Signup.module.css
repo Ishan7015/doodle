@@ -1,0 +1,195 @@
+.background{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --color: #E1E1E1;
+    background-color: #F3F3F3;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+    
+}
+
+@keyframes motion {
+    /* 0% {
+        top: 3em;
+        right: 35vw;
+    }
+    25% {
+        top: 4em;
+        right: 34vw;
+    }
+    50%{
+        top: 5em;
+        right: 35vw;
+    }
+    75%{
+        top: 4em;
+        right: 36vw;
+    } */
+    from { transform: rotate(0deg) translateX(10px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(10px) rotate(-360deg); }
+    
+}
+
+.decorCircle1 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom left, #2becc2, #5ed9e9);
+    position: absolute;
+    top: 10vh;
+    right: 35vw;
+    animation-name: motion;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.decorCircle2 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to bottom left, #9f2bec, #c494f1);
+    border-radius: 50%;
+    position: absolute;
+    top: 60vh;
+    left: 35vw;
+    animation-name: motion;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.decorCircle3 {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom left, #2becc2, #5ed9e9);
+    border-radius: 50%;
+    position: absolute;
+    top: 60vh;
+    left: 25vw;
+    animation-name: motion;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+.decorCircle4 {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom left, #9f2bec, #c494f1);
+    border-radius: 50%;
+    position: absolute;
+    top: 35vh;
+    right: 25vw;
+    animation-name: motion;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+.loginForm{
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: white; */
+    padding: 4em 4em;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 9;
+    overflow: hidden;
+}
+
+.input{
+    padding: 1em;
+    margin: 1em;
+    width: 25em;
+    background-color: rgba(236, 246, 255, 0.767);
+    border: 0.5px solid rgba(177, 177, 177, 0.644);
+    border-radius: 3px;
+}
+
+.h1{
+    font-size: 25px;
+}
+
+.loginLogo{
+    height: 30px;
+    width: 30px;
+}
+
+.button{
+    color: white;
+    background-color: #05A4EF;
+    padding: 0.5em;
+    width: 100px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 1em;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.button:active{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    transition: 200ms;
+}
+
+.h6{
+    font-size: 12px;
+    font-weight: 100;
+    color: #3a3a3a;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.h6:hover{
+    text-decoration: underline;
+}
+
+.span{
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.showPassword{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    top: -3em;
+    margin-right: -15em;
+    cursor: pointer;
+}
+
+.toggleOn{
+    opacity: 1;
+}
+
+.toggleOff {
+    opacity: 0.2;
+}
+
+@media only screen and (max-width: 485px) {
+    .decorCircle1{
+        height: 200px;
+        width: 200px;
+        right: 5vw;
+        top: 5vh;
+    }
+
+    .decorCircle2{
+        height: 200px;
+        width: 200px;
+        top: 70vh;
+        left: 5vw;
+    }
+
+    .loginForm{
+        transform: scale(0.8);
+    }
+  }
